@@ -1,0 +1,14 @@
+---
+- name: Download zinit installer
+  get_url:
+    url: https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh
+    dest: $HOME/zinit-installer.sh
+    mode: 0755
+
+- name: Execute the zinit installer
+  shell: $HOME/zinit-installer.sh
+
+- name: Remove the zinit installer
+  file:
+    path: $HOME/zinit-installer.sh
+    state: absent
