@@ -1,6 +1,6 @@
 # Ansible Role: Zinit
 
-[![Build Status](https://travis-ci.org/kadaan/ansible-role-zinit.svg?branch=master)](https://travis-ci.org/kadaan/ansible-role-zinit)
+[![Build Status](https://travis-ci.com/kadaan/ansible-role-zinit.svg?branch=master)](https://travis-ci.com/kadaan/ansible-role-zinit)
 
 Installs zinit.
 
