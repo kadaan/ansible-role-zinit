@@ -1,10 +1,8 @@
 ---
 sudo: required
 language: generic
-# 10.11 (see https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
 os: osx
 osx_image: xcode10
-language: generic
 env: PYTHON=36
 
 install:
