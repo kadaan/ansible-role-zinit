@@ -1,22 +1,22 @@
 ---
 - name: Check if zinit installed
-  shell: command -v zinit >/dev/null 2>&1
+  stat:
+    path: "{{ ansible_env.HOME }}/.zinit"
   register: zinit_installed
-  ignore_errors: yes
 
 - name: Download zinit installer
   get_url:
     url: https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh
     dest: $HOME/zinit-installer.sh
     mode: 0755
-  when: zinit_installed.rc != 0
+  when: zinit_installed.stat.isdir is not defined or not zinit_installed.stat.isdir
 
 - name: Execute the zinit installer
   shell: $HOME/zinit-installer.sh
-  when: zinit_installed.rc != 0
+  when: zinit_installed.stat.isdir is not defined or not zinit_installed.stat.isdir
 
 - name: Remove the zinit installer
   file:
     path: $HOME/zinit-installer.sh
     state: absent
-  when: zinit_installed.rc != 0
+  when: zinit_installed.stat.isdir is not defined or not zinit_installed.stat.isdir
