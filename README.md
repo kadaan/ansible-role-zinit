@@ -1,6 +1,6 @@
 # Ansible Role: Zinit
 
-[![Build Status](https://travis-ci.com/kadaan/ansible-role-zinit.svg?branch=master)](https://travis-ci.com/kadaan/ansible-role-zinit)
+[![CI][badge-gh-actions]][link-gh-actions]
 
 Installs zinit.
 
@@ -25,3 +25,6 @@ None.
 ## License
 
 Apache 2.0
+
+[badge-gh-actions]: https://github.com/kadaan/ansible-role-zinit/workflows/CI/badge.svg?event=push
+[link-gh-actions]: https://github.com/kadaan/ansible-role-zinit/actions?query=workflow%3ACI
